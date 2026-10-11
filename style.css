@@ -1,0 +1,181 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #243858;
+    background: #eef4ff;
+}
+
+header {
+    padding: 22px;
+    text-align: center;
+    color: white;
+    background: #294b7a;
+    border-radius: 15px;
+}
+
+header h1 {
+    margin: 0 0 10px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 28px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px #d1dced;
+}
+
+h2 {
+    line-height: 1.4;
+}
+
+label {
+    display: block;
+    margin: 18px 0 8px;
+    font-weight: bold;
+}
+
+select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #dce6f5;
+    border-radius: 8px;
+    font-size: 16px;
+    background: white;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    font-weight: bold;
+}
+
+.record {
+    padding: 15px;
+    background: #fff6db;
+    border-radius: 8px;
+}
+
+.timer-area {
+    margin: 25px 0;
+}
+
+.timer-area strong {
+    float: right;
+    font-size: 20px;
+}
+
+.timer-track {
+    height: 9px;
+    margin-top: 12px;
+    overflow: hidden;
+    background: #dce6f5;
+    border-radius: 10px;
+}
+
+#timer-bar {
+    height: 100%;
+    width: 100%;
+    background: #168e68;
+    transition: width 0.3s linear;
+}
+
+#question {
+    margin: 25px 0;
+    font-size: 25px;
+}
+
+.option {
+    display: block;
+    margin: 12px 0;
+    padding: 15px;
+    border: 2px solid #dce6f5;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.option:hover {
+    background: #eef4ff;
+}
+
+.option:has(input:checked) {
+    background: #e4efff;
+    border-color: #3978d4;
+}
+
+.option input {
+    margin-right: 10px;
+}
+
+button {
+    width: 100%;
+    margin-top: 14px;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    background: #168e68;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    filter: brightness(0.92);
+}
+
+button:disabled {
+    background: #9eabb8;
+    cursor: not-allowed;
+}
+
+.secondary {
+    background: #294b7a;
+}
+
+#feedback {
+    min-height: 24px;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+.correct {
+    color: #12845d;
+}
+
+.wrong {
+    color: #d43838;
+}
+
+#result-screen {
+    text-align: center;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+footer {
+    text-align: center;
+    color: #64748b;
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 12px;
+    }
+
+    .container {
+        padding: 18px;
+    }
+
+    #question {
+        font-size: 21px;
+    }
+}

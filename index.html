@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arithmetic Quiz Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Arithmetic Quiz</h1>
+        <p>Challenge your brain. Beat your best score!</p>
+    </header>
+
+    <main class="container">
+        <section id="start-screen">
+            <h2>Ready to Play?</h2>
+
+            <label for="difficulty">Choose difficulty</label>
+            <select id="difficulty">
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+
+            <p class="record">
+                🏆 Personal Best: <span id="best-score">0</span>
+            </p>
+
+            <button id="start-btn">Start Quiz</button>
+        </section>
+
+        <section id="quiz-screen" hidden>
+            <div class="stats">
+                <span id="progress">Question 1/10</span>
+                <span id="score">Score: 0</span>
+            </div>
+
+            <div class="timer-area">
+                <span>Time left</span>
+                <strong id="timer">15</strong>
+                <div class="timer-track">
+                    <div id="timer-bar"></div>
+                </div>
+            </div>
+
+            <h2 id="question"></h2>
+            <div id="options"></div>
+            <p id="feedback" aria-live="polite"></p>
+
+            <button id="submit-btn">Submit Answer</button>
+            <button id="next-btn" hidden>Next Question</button>
+        </section>
+
+        <section id="result-screen" hidden>
+            <h2>Quiz Completed!</h2>
+            <p id="final-score"></p>
+            <p id="result-message"></p>
+            <p id="best-result"></p>
+            <button id="play-again-btn">Play Again</button>
+            <button id="home-btn" class="secondary">Change Difficulty</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>Practice daily and improve your arithmetic skills!</p>
+    </footer>
+</body>
+</html>
